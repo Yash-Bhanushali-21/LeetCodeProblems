@@ -8,6 +8,8 @@ class Solution:
                 increasing = False
             elif nums[index] < nums[index + 1]:
                 decreasing = False
+            elif increasing == False and decreasing == False:
+                break
 
         return increasing or decreasing
         
