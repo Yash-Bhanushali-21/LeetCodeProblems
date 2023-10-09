@@ -15,12 +15,12 @@ class Solution:
             else:
                 firstOccurenceIndex = mid
                 break
-        
+        possibleFirstOccurence = firstOccurenceIndex 
         if firstOccurenceIndex != -1:
             while firstOccurenceIndex - 1 >= 0 and nums[firstOccurenceIndex - 1] == target:
                 firstOccurenceIndex -= 1
         #else its confirmed its first occurence.
-        lastOccurenceIndex = firstOccurenceIndex
+        lastOccurenceIndex = possibleFirstOccurence
         while lastOccurenceIndex != -1 and lastOccurenceIndex + 1 < len(nums) and nums[lastOccurenceIndex + 1] == target:
             lastOccurenceIndex += 1
        
